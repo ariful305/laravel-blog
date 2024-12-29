@@ -1,5 +1,18 @@
-* text=auto
-*.css linguist-vendored
-*.scss linguist-vendored
-*.js linguist-vendored
+# Enforce LF line endings for text files
+* text=auto eol=lf
+
+# Define diff algorithms for specific file types
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+# Exclude specific files from export operations (e.g., GitHub tarball downloads)
+.github export-ignore
 CHANGELOG.md export-ignore
+.styleci.yml export-ignore
+
+# Mark the project as a PHP project
+*.php linguist-language=PHP
+*.blade.php linguist-language=PHP
