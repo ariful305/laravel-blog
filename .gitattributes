@@ -1,18 +1,17 @@
-# Enforce LF line endings for text files
-* text=auto eol=lf
+# Ignore frontend assets
+resources/js/** linguist-vendored
+node_modules/** linguist-vendored
 
-# Define diff algorithms for specific file types
-*.blade.php diff=html
-*.css diff=css
-*.html diff=html
-*.md diff=markdown
-*.php diff=php
+# Ignore public assets
+public/** linguist-generated
+js/** linguist-generated
+admin/** linguist-generated
+website/** linguist-generated
 
-# Exclude specific files from export operations (e.g., GitHub tarball downloads)
-.github export-ignore
-CHANGELOG.md export-ignore
-.styleci.yml export-ignore
 
-# Mark the project as a PHP project
+# Ignore template/demo files
+demo/** linguist-generated
+
+# Force PHP
 *.php linguist-language=PHP
 *.blade.php linguist-language=PHP
