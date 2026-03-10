@@ -4,6 +4,7 @@ node_modules/** linguist-vendored
 
 # Ignore public assets
 public/** linguist-generated
+css/** linguist-generated
 js/** linguist-generated
 admin/** linguist-generated
 website/** linguist-generated
