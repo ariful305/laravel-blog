@@ -25,7 +25,7 @@ The Laravel Blog Project is a versatile and user-friendly web application built 
 
 Make sure you have the following requirements installed on your machine:
 
-- [PHP](https://www.php.net/) (>= 7.4)
+- [PHP](https://www.php.net/) (>= 8.1)
 - [Composer](https://getcomposer.org/)
 - [Node.js](https://nodejs.org/) (for npm)
 - [MySQL](https://www.mysql.com/) 
