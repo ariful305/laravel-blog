@@ -17,7 +17,7 @@ class TagController extends Controller
     public function index()
     {
         $tag = Tag::all();
-        return view('admin.tag.index',compact('tag'));
+        return spa('admin.tag.index',compact('tag'));
     }
 
     /**
@@ -27,7 +27,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        return view('admin.tag.create');
+        return spa('admin.tag.create');
     }
 
     /**
@@ -76,7 +76,7 @@ class TagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        return view('admin.tag.edit',compact('tag'));
+        return spa('admin.tag.edit',compact('tag'));
     }
 
     /**

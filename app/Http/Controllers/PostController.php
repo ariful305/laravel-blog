@@ -22,7 +22,7 @@ class PostController extends Controller
     {
         $post = Post::all();
 
-        return view('admin.post.index',compact('post'));
+        return spa('admin.post.index',compact('post'));
     }
 
     /**
@@ -34,7 +34,7 @@ class PostController extends Controller
     {
         $category = Category::all();
         $tag = Tag::all();
-        return view('admin.post.create',compact(['category','tag']));
+        return spa('admin.post.create',compact(['category','tag']));
     }
 
     /**
@@ -107,7 +107,7 @@ class PostController extends Controller
 
         $category = Category::all();
         $tag = Tag::all();
-        return view('admin.post.edit',compact(['category','tag','post']));
+        return spa('admin.post.edit',compact(['category','tag','post']));
     }
 
     /**

@@ -29,7 +29,7 @@
                             <h3 class="card-title">All Categories</h3>
                         </div>
                         <div class="col-md-2 d-flex justify-content-end">
-                            <a href="{{ route('category.create') }}" class="btn btn-primary">Add Categories</a>
+                            <a href="{{ route('category.create') }}" class="btn btn-primary" @spa>Add Categories</a>
                         </div>
 
                     </div>
@@ -65,7 +65,7 @@
                 <td>{{ date('F j, Y', strtotime($iteam->updated_at)) }}</td>
 
                 <td>
-                <a class="btn btn-info btn-sm" href="{{ route('category.edit',[$iteam->id])}}" >
+                <a class="btn btn-info btn-sm" href="{{ route('category.edit',[$iteam->id])}}" @spa>
                     <i class="fas fa-pencil-alt">
                     </i>
                     Edit

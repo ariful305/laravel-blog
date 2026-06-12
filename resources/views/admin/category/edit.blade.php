@@ -31,7 +31,7 @@
 
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{ route('category.update',[$category->id]) }}" method="POST">
+        <form action="{{ route('category.update',[$category->id]) }}" method="POST" >
             @csrf
             @method('PUT')
           <div class="card-body">

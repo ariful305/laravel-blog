@@ -30,13 +30,13 @@ class HomeController extends Controller
         $category = Category::all();
         $tag = Tag::all();
         $post = Post::orderBy('created_at','DESC')->take('5')->get();
-        return view('admin.dashboard.index',compact(['category','tag','post']));
+        return spa('admin.dashboard.index',compact(['category','tag','post']));
     }
 
     public function contact()
     {
         $contact = Contact::all();
-        return view('admin.dashboard.contact',compact('contact'));
+        return spa('admin.dashboard.contact',compact('contact'));
     }
 
 
@@ -51,7 +51,7 @@ class HomeController extends Controller
     {
        $contact = Contact::where('id',$id)->first();
 
-       return view('admin.dashboard.view_contact',compact('contact'));
+       return spa('admin.dashboard.view_contact',compact('contact'));
     }
 
         /**

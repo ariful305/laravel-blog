@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('admin') }}/css/adminlte.min.css">
 </head>
 
-<body class="hold-transition sidebar-mini sidebar-collapse">
+<body class="hold-transition sidebar-mini ">
     <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Preloader -->
@@ -101,8 +101,8 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="{{ route('dashboard') }}"
-                                class="nav-link {{ request()->is('admin/dashboard') ? 'active' : '' }}">
+                            <a href="{{ route('dashboard') }}" @spa
+                                class="nav-link {{ request()->is('admin/dashboard') ? 'active' : '' }}" >
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -111,7 +111,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('category.index') }}"
-                                class="nav-link {{ request()->is('admin/category*') ? 'active' : '' }}">
+                                class="nav-link {{ request()->is('admin/category*') ? 'active' : '' }}" @spa>
                                 <i class="nav-icon fas fa-server"></i>
                                 <p>
                                     Category
@@ -120,7 +120,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('tag.index') }}"
-                                class="nav-link {{ request()->is('admin/tag*') ? 'active' : '' }}">
+                                class="nav-link {{ request()->is('admin/tag*') ? 'active' : '' }}" @spa>
                                 <i class="nav-icon fas fa-tags"></i>
                                 <p>
                                     Tag
@@ -129,7 +129,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('post.index') }}"
-                                class="nav-link {{ request()->is('admin/post*') ? 'active' : '' }}">
+                                class="nav-link {{ request()->is('admin/post*') ? 'active' : '' }}" @spa>
                                 <i class="nav-icon fas fa-tag"></i>
                                 <p>
                                     Post
@@ -138,7 +138,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.contacts') }}"
-                                class="nav-link {{ request()->is('admin/contact*') ? 'active' : '' }}">
+                                class="nav-link {{ request()->is('admin/contact*') ? 'active' : '' }}" @spa>
                                 <i class="nav-icon fas fa-headset"></i>
                                 <p>
                                     Contact
@@ -154,7 +154,7 @@
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div class="content-wrapper" @spaContent>
             <!-- Content Header (Page header) -->
 
             <!-- Main content -->
@@ -167,7 +167,6 @@
 
     </div>
     <!-- ./wrapper -->
-
     <!-- jQuery -->
     <script src="{{ asset('admin') }}/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
@@ -222,6 +221,7 @@
 
     </script>
     @include('includes.alerts')
+    @spaEngine
 </body>
 
 </html>

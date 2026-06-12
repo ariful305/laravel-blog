@@ -19,7 +19,7 @@ class CategoryController extends Controller
     public function index()
     {
         $category = Category::all();
-        return view('admin.category.index',compact('category'));
+        return spa('admin.category.index',compact('category'));
 
     }
 
@@ -30,7 +30,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category.create');
+        return spa('admin.category.create');
     }
 
     /**
@@ -79,7 +79,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('admin.category.edit',compact('category'));
+        return spa('admin.category.edit',compact('category'));
     }
 
     /**
